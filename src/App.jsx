@@ -9,9 +9,9 @@ function Titulo() {
 function TarjetaPerfil({ nombre, carrera, semestre }) {
   return (
     <div style={{ border: '1px solid #888', borderRadius: 8, padding: 16, margin: 16 }}>
-      <h2>{Nadya Yahuili Avendaño Chavez}</h2>
-      <p>Carrera: {Ingenieria en sistemas computacionales}</p>
-      <p>Semestre: {7mo}</p>
+      <h2>{nombre}</h2>
+      <p>Carrera: {carrera}</p>
+      <p>Semestre: {semestre}</p>
     </div>
   )
 }
