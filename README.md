@@ -1,16 +1,18 @@
-# React + Vite
+# Act4. Introducción a React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Mini aplicación hecha con Vite + React que incluye un componente simple, una tarjeta de perfil con props, un contador con estado (useState) y una lista de tareas dinámica renderizada con .map() y keys. Se despliega con gh-pages.
 
-Currently, two official plugins are available:
+## Preguntas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**a) ¿Qué diferencia hay entre props y state?**
+Las props son datos que un componente padre le envía a un hijo; el hijo solo las lee y no puede modificarlas. El state es información propia de un componente que puede cambiar con el tiempo, y cuando cambia React vuelve a renderizar el componente.
 
-## React Compiler
+**b) ¿Por qué es importante usar una key en una lista?**
+La key le da a cada elemento una identidad única. Así React sabe qué elementos se agregaron, cambiaron o se eliminaron, y actualiza solo lo necesario en lugar de rehacer toda la lista. Sin keys puede haber errores y bajo rendimiento.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**c) ¿Qué hace useState y dónde lo usé?**
+useState es un Hook que permite a un componente funcional guardar un valor y una función para actualizarlo. Al llamar esa función, React vuelve a renderizar con el nuevo valor. Lo usé en el componente Contador (`const [cuenta, setCuenta] = useState(0)`) para sumar y restar, y en ListaTareas para guardar y modificar las tareas.
 
-## Expanding the Oxlint configuration
+**d) Repositorio:** https://github.com/yailivach91-ctrl/t3_act4_react
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+**e) Proyecto desplegado:** https://yailivach91-ctrl.github.io/t3_act4_react/
